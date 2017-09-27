@@ -13,15 +13,15 @@ Thermostat.prototype.turnDown = function() {
   }
 };
 
-Thermostat.prototype.currentTemperature = function() {
-  return this.temperature;
-};
-
 Thermostat.prototype.turnUp = function() {
   if (this.temperature < this.maximumTemp) {
     this.temperature += 1;
   } else {
   }
+};
+
+Thermostat.prototype.currentTemperature = function() {
+  return this.temperature;
 };
 
 Thermostat.prototype.isMinimumTemp = function() {

@@ -51,9 +51,15 @@ describe("Thermostat", function() {
   })
 
   it('has a maxiumum temperature of 32 degrees with power saving turned off', function() {
-    thermostat.powerSaving = false;
-    thermostat.powerSaver();
+    thermostat.powerSaverOff();
     expect(thermostat.maximumTemp).toEqual(32);
+  })
+
+  it('can reset the temperature to 20 degrees with a reset function', function() {
+    thermostat.reset
+    expect(thermostat.powerSaving).toEqual(true)
+    expect(thermostat.temperature).toEqual(20)
+    expect(thermostat.maximumTemp).toEqual(25)
   })
 
 });

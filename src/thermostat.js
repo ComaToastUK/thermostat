@@ -1,3 +1,5 @@
+"use strict";
+
 function Thermostat() {
   this.temperature = 20;
   this.MINIMUMTEMP = 10;
@@ -44,7 +46,7 @@ Thermostat.prototype.powerSaverOn = function() {
 
 Thermostat.prototype.reset = function() {
   this.temperature = 20;
-  this.powerSaverOn;
+  this.powerSaverOn();
 };
 
 Thermostat.prototype.energyUsage = function() {

@@ -34,4 +34,12 @@ $('#temp-reset').click(function() {
     $('#temperature').attr('class', thermostat.energyUsage());
   }
 
+  $('#current-city').change(function() {
+    var city = $('#current-city').val();
+    var api = 'http://api.openweathermap.org/data/2.5/weather?q=';
+    var api2 = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric';
+    $.get(api + city + api2, function(data) {
+      $('#current-temperature').text(data.main.temp);
+    });
+  });
 });

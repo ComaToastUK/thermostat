@@ -11,18 +11,39 @@
   </head>
   <body>
     <div class="container-fluid">
-      <section>
-        <h1 id="temperature" class="medium-usage"></h1>
-        <p>
-          <button class='btn' id="temp-up">+</button>
-          <button class='btn'id="temp-down">-</button>
-          <button class='btn'id="temp-reset">reset</button>
-          Power Saver is <span id="power-saving">on</span>
-          <button class='btn'id="psm-on">PSM on</button>
-          <button class='btn'id="psm-off">PSM off</button>
-        </p>
-      </section>
+      <div class="row">
+        <div class="col" style="width:500px">
+              <h1>House temperature: <span id="temperature" class="medium-usage"></span></h1>
+
+
+                <h1>City temperature: <span id="current-temperature"></span></h1>
+                <select id="current-city">
+                  <option value="london">London</option>
+                  <option value="newyork">New York</option>
+                  <option value="paris">Paris</option>
+                  <option value="tokyo">Tokyo</option>
+                  <option value="liverpool">Liverpool</option>
+                  <option value="tianjin">Tianjin</option>
+                  <option value="mexicocity">Mexico City</option>
+                  <option value="buenosaires">Buenos Aires</option>
+                </select>
+
+            <p>
+              <button class='btn' id="temp-up">+</button>
+              <button class='btn'id="temp-down">-</button>
+              <button class='btn'id="temp-reset">reset</button>
+              Power Saver is <span id="power-saving">on</span>
+              <button class='btn'id="psm-on">PSM on</button>
+              <button class='btn'id="psm-off">PSM off</button>
+            </p>
+          </div>
+
+        <div class="col" style="width:300px">
+          <img src="degree.png" width="100"/>
+        </div>
+      </div>
     </div>
+
     <script src="src/thermostat.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
